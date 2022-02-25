@@ -1,20 +1,32 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
 
-export default function App() {
+import React, { useState } from 'react';
+import { StyleSheet, Text, View,SafeAreaView, StatusBar } from 'react-native';
+
+import HomeStack from './src/navigation/HomeStack';
+
+
+
+export default function App(props) {
+
+
+  // const [nombre, setNombre] = useState(null);
+  // const [edad, setEdad] = useState(null);
+  // const [altura, setAltura] = useState(0);
+  // const [peso, setPeso] = useState(0.0);
+
+
+  // console.log("Nombre ->" + nombre);
+
+  // console.log("Edad ->" + edad);
+  
+  // console.log("Peso ->" + peso);
+  
+  // console.log("Altura ->" + altura);
+
+  console.disableYellowBox=true;
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <HomeStack/>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
